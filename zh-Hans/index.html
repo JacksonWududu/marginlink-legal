@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MarginLink</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body><a class="skip" href="#main">跳至正文</a><div class="page"><header><h1 class="brand"><a href="./">MarginLink</a></h1><nav aria-label="内容导航"><a href="#privacy">隐私政策</a><a href="#terms">使用条款</a><a href="#licenses">第三方许可</a></nav><nav class="languages" aria-label="语言"><a href="../zh-Hans/" lang="zh-Hans" hreflang="zh-Hans" aria-current="true">简体中文</a><a href="../zh-Hant/" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a><a href="../en/" lang="en" hreflang="en">English</a></nav></header><main id="main"><section id="privacy"><h2 id="隐私政策">隐私政策</h2>
+<p>MarginLink 由个人开发者 yanhao wu 提供。我们尽量在你的 Mac 上处理阅读内容；播客搜索、节目资源和音频播放需要连接相应第三方。本文说明应用和法律文档网站各自的数据处理方式。</p>
+<p>隐私联系邮箱：<a href="mailto:BloatMonster@163.com">BloatMonster@163.com</a>。</p>
+<h3 id="1-本地阅读资料">1. 本地阅读资料</h3>
+<p>你选择导入 EPUB 或 PDF 后，应用会把原文复制到自己管理的本地书库，不修改你选择的源文件。应用保存书名、作者、格式、原始文件名及阅读所需的信息，以 SHA-256 标识文档。SHA-256 用于识别内容，不是文件加密。</p>
+<p>划线、引文、笔记、主题、颜色、原文定位、创建和修改时间、阅读位置、进度及界面偏好保存在本机。当前应用没有把书库、原文或笔记上传到开发者服务器的功能，也没有应用账户或应用提供的云同步功能。</p>
+<p>扫描 PDF 的文字识别通过本机 Apple Vision 进行。识别页面在本地处理；你保存的引文和定位信息可以成为本地笔记的一部分。</p>
+<h3 id="2-图片与收藏墙">2. 图片与收藏墙</h3>
+<p>你为收藏墙选择的图片会以原始文件及缩略图等形式保存在本机。原图可能保留 EXIF 等元数据，包括图片本来含有的拍摄位置；应用不保证清除这些元数据。挂画替换和恢复功能可能保留上一张图片，以便恢复。</p>
+<p>这些图片不通过当前应用上传给开发者。你自行分享、导出或通过系统备份保存资料时，相关处理取决于你选择的工具和服务。</p>
+<h3 id="3-播客搜索与资源请求">3. 播客搜索与资源请求</h3>
+<p>播客功能会发起以下网络请求：</p>
+<ul><li>搜索时向 Apple iTunes 目录发送搜索词和所选目录地区；通过 Apple 播客链接查找节目时发送节目 ID 和地区。</li><li>预览或打开节目时，向节目发布者或其服务商请求 RSS、封面及相关资源。预览本身也可能在本机保存节目和单集档案。</li><li>读取节目文字时，请求发布者提供的公开转录；播放时向媒体托管方请求音频。资源请求可能经过第三方重定向或 CDN。</li></ul>
+<p>目录地区用于选择搜索目录，默认值可根据界面语言或系统地区推导；这项功能不使用 GPS 定位。接收请求的第三方服务商通常可以看到连接 IP 地址、请求时间、资源地址，以及请求中携带的搜索词、地区或节目 ID。应用的播客客户端还发送应用标识和播放所需的音频范围请求；当前实现不附带书库、笔记或图片，也不附加登录 Cookie 或 Authorization 请求头；发布者提供的资源 URL 本身可能包含访问签名或令牌。</p>
+<p>第三方可能据此了解你请求过的节目或单集。其独立处理方式和保留期限由各自政策决定，不能由本应用控制或保证。Apple 的处理方式见 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>；其他节目和媒体服务商以其公布的政策为准。</p>
+<p>你可以选择不使用播客功能；需要联网的功能将无法在断网时完整使用。</p>
+<h3 id="4-播客的本地记录与临时音频">4. 播客的本地记录与临时音频</h3>
+<p>节目和单集信息、资源 URL、公开转录全文、播客笔记、播放位置、音量和部分选择状态会保存在本机，封面也会在本地缓存。把播客项目从收藏墙移除，并不等于删除对应的收听记录和笔记。</p>
+<p>在支持的 macOS 版本上，文字时间校准使用本机音频及已经安装的听写语言资源，通过系统 SpeechAnalyzer 处理。当前实现不会为此请求云端识别或下载语音模型。校准可能下载一集音频并生成临时转换文件；正常结束任务或关闭播放加载器时会清理相应临时文件，异常退出可能留下残留文件。</p>
+<h3 id="5-分析诊断和安全">5. 分析、诊断和安全</h3>
+<p>当前应用没有内置广告 SDK 或分析 SDK，也没有向开发者自动发送使用统计或崩溃报告的实现。应用和系统可能在本机记录运行错误等诊断信息；你通过系统设置允许 Apple 收集的诊断、商店记录和你自行发送的材料，分别受相应设置及政策约束。</p>
+<p>应用限制书籍中的脚本、远程资源和任意文件路径访问；阅读所需的核心运行库随应用本地提供。播客请求单独访问外部服务。这些措施不代表绝对安全。本地数据没有应用层加密；设备权限、磁盘加密和备份由你及操作系统管理。</p>
+<h3 id="6-保存删除与数据丢失">6. 保存、删除与数据丢失</h3>
+<p>阅读和播客资料主要保存在应用管理的本地存储中。你可以在界面中逐条删除书籍笔记或播客笔记。当前版本没有提供覆盖所有书籍和播客档案的一键清空入口；卸载应用也不应被视为已经删除全部支持文件、临时文件或系统备份。</p>
+<p>当前实现遇到本地书库索引无法解析或内容校验失败时，会清空并重建书库，可能删除同一存储目录中的书籍、播客和收藏墙资料。因此，应用不能保证资料始终保留到你主动删除；请为重要原文和笔记另行保留副本。</p>
+<p>需要完整清理本地资料时，请先退出应用，依据实际安装环境管理应用支持文件和临时文件；如不确定，可通过本文邮箱联系我们。开发者无法远程访问或删除只存在于你设备或个人备份中的资料。撤回文件选择授权不会自动删除已经导入的副本；需要停止播客外联时，请完全退出应用。</p>
+<h3 id="7-主动联系开发者">7. 主动联系开发者</h3>
+<p>如果你发送邮件，我们会收到你的邮件地址、正文及你主动附带的文件，并用来答复、排查问题或处理请求。请勿发送无关的书籍全文、敏感笔记或个人照片；可优先提供合成示例。邮件还会经过你和开发者使用的邮件服务商。</p>
+<p>联系资料仅在处理请求所需的期间或适用法律要求的期间保留。你可以使用本文邮箱询问、更正或请求删除开发者持有的联系资料；如依法需要保留，我们会说明相应情况。</p>
+<h3 id="8-法律文档网站">8. 法律文档网站</h3>
+<p>本网站本身不添加分析脚本、广告、登录系统、追踪 Cookie 或外部字体。网站计划使用 GitHub Pages 托管；当你访问该托管版本时，GitHub 会为安全目的记录和存储访问者 IP 地址，具体处理见 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages 数据说明</a>和 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>。这与应用本地书库的处理是两件事。</p>
+<h3 id="9-政策更新与联系">9. 政策更新与联系</h3>
+<p>功能或数据处理方式变化时，我们会更新本页。简体中文、繁体中文和英文版本应保持同等内容；如发现表达不一致，请联系我们确认。隐私问题或请求请发送至 <a href="mailto:BloatMonster@163.com">BloatMonster@163.com</a>，收件人为 yanhao wu。</p><nav class="languages" aria-label="语言"><a href="../zh-Hans/#privacy" lang="zh-Hans" hreflang="zh-Hans" aria-current="true">简体中文</a><a href="../zh-Hant/#privacy" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a><a href="../en/#privacy" lang="en" hreflang="en">English</a></nav></section><section id="terms"><h2 id="使用条款">使用条款</h2>
+<p>本条款说明你使用 yanhao wu 提供的 MarginLink 时的基本约定。联系邮箱：<a href="mailto:BloatMonster@163.com">BloatMonster@163.com</a>。</p>
+<h3 id="1-应用用途与你的内容">1. 应用用途与你的内容</h3>
+<p>MarginLink 是面向 Mac 的 EPUB / PDF 阅读工具，提供原文阅读、划线、笔记、整理和原文回跳，并包含阅读室、图片收藏墙和播客功能。实际可用功能以安装版本及系统支持情况为准。</p>
+<p>你的书籍、笔记和图片等资料的权利仍归你或相应权利人所有；导入不使开发者取得其所有权。你需要有权导入、保存、播放和使用相关内容。请勿侵犯他人的版权、隐私或其他合法权益，也不要绕过访问控制或非法获取受保护内容。应用不提供 DRM 解密。</p>
+<h3 id="2-结果核对与资料保护">2. 结果核对与资料保护</h3>
+<p>EPUB 的字体、样式和复杂版式可能因重新排版而变化。PDF 文字层和 OCR 可能有错字、漏字或阅读顺序偏差。原文回跳依赖具体文档和保存的定位信息；重复句、版本变化或不确定位置可能导致失败，不应猜测第一处为成功。请核对实际显示的原文、高亮和引文。</p>
+<p>应用不能保证处理所有文档，也不能替代你检查原始资料。请保留重要原文和笔记的独立副本。当前版本没有云同步或开发者托管的书库恢复；本地书库索引解析或校验失败时可能清空并重建存储。具体保存、删除和数据丢失边界统一见<a href="#privacy">隐私政策</a>。</p>
+<h3 id="3-外部资源与交易">3. 外部资源与交易</h3>
+<p>播客、公开转录、封面和音频依赖相应第三方，可能变更、撤回、限制地区或停止提供。应用不保证其持续可用、准确或适合特定用途；能在应用中访问，也不代表你获得再分发或商业利用的许可。访问服务可能还受第三方条款约束，你自行承担网络连接费用。</p>
+<p>本条款不设定或承诺应用售价、订阅、免费期限或退款条件；通过商店取得应用时，交易依适用商店条款处理。</p>
+<h3 id="4-许可隐私与支持">4. 许可、隐私与支持</h3>
+<p>应用许可关系以取得该版本时适用的许可协议和分发渠道规则为准；本页不代替商店的应用许可协议。PDF.js 等组件的许可和版权声明集中列于<a href="#licenses">第三方许可</a>，其直接赋予的权利不受本条款削减，也不因此将整个 MarginLink 应用变为开源软件。</p>
+<p>数据处理统一见<a href="#privacy">隐私政策</a>。使用或隐私问题请联系 <a href="mailto:BloatMonster@163.com">BloatMonster@163.com</a>，并仅提供解决问题所需的信息。开发者无法远程读取或恢复只存在于你设备上的书库。</p>
+<h3 id="5-责任更新与停止使用">5. 责任、更新与停止使用</h3>
+<p>在适用法律允许的范围内，应用按实际提供的状态和可用情况提供，不保证无错误、不间断或满足每一种特定需求。本条款不排除依法不能排除的责任，也不减损适用消费者保护法律赋予你的权利。争议适用依法对双方关系生效的法律和争议解决规则，本条款不指定尚未确认的司法辖区。</p>
+<p>你可以停止使用应用；停止使用或卸载不等于清除全部支持文件及备份，具体见隐私政策。条款实质变化会反映在本页中。简体中文、繁体中文和英文用于表达同一组约定；发现差异时可联系 yanhao wu 确认。</p><nav class="languages" aria-label="语言"><a href="../zh-Hans/#terms" lang="zh-Hans" hreflang="zh-Hans" aria-current="true">简体中文</a><a href="../zh-Hant/#terms" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a><a href="../en/#terms" lang="en" hreflang="en">English</a></nav></section><section id="licenses"><h2 id="第三方许可">第三方许可</h2>
+<p>MarginLink 使用以下本地打包的组件与字体。本节集中提供相应版权和许可原文；摘要仅为阅读指引，不修改上游条款，也不表示整个应用采用相同的开源许可。许可原文保留英文，三种界面语言共用同一份文件。</p>
+<h3 id="1-pdfjs-56205">1. PDF.js 5.6.205</h3>
+<p>PDF.js 主体由 Mozilla 及其贡献者提供，采用 Apache License 2.0。完整版权、授权条件、专利条款及免责声明见 <a href="../assets/licenses/pdfjs/LICENSE.txt">PDF.js 许可原文</a>。</p>
+<p>PDF.js 随附的字体、字符映射、解码和色彩资源各自有独立许可，不能全部概括为 Apache-2.0：</p>
+<ul><li>Adobe CMaps：<a href="../assets/licenses/pdfjs/cmaps/LICENSE.txt">版权及 BSD 三条款形式许可</a>。</li><li>Foxit / PDFium 字体：<a href="../assets/licenses/pdfjs/standard-fonts/LICENSE_FOXIT.txt">版权及 BSD 三条款形式许可</a>。</li><li>Liberation Sans 1.07.4：<a href="../assets/licenses/pdfjs/standard-fonts/LICENSE_LIBERATION.txt">GPLv2、Liberation 字体例外及完整条款</a>。</li><li>QCMS：<a href="../assets/licenses/pdfjs/wasm/LICENSE_QCMS.txt">MIT 许可</a>；PDF.js QCMS 包装层：<a href="../assets/licenses/pdfjs/wasm/LICENSE_PDFJS_QCMS.txt">MIT 许可</a>。</li><li>OpenJPEG：<a href="../assets/licenses/pdfjs/wasm/LICENSE_OPENJPEG.txt">版权及 BSD 两条款形式许可</a>；PDF.js OpenJPEG 包装层：<a href="../assets/licenses/pdfjs/wasm/LICENSE_PDFJS_OPENJPEG.txt">BSD 两条款形式许可</a>。</li><li>JBIG2：<a href="../assets/licenses/pdfjs/wasm/LICENSE_JBIG2.txt">PDFium BSD 及 Apache-2.0 组合声明</a>；PDF.js JBIG2 包装层：<a href="../assets/licenses/pdfjs/wasm/LICENSE_PDFJS_JBIG2.txt">Apache-2.0 声明</a>。</li><li>ICC 色彩配置：<a href="../assets/licenses/pdfjs/iccs/LICENSE.txt">CC0 1.0 原文</a>。</li></ul>
+<p>当前本地版本附带的 QCMS 包装层和 Liberation 字体许可文件存在上游已确认的文本错误。本页分别采用 Mozilla <a href="https://github.com/mozilla/pdf.js/pull/21747">QCMS 修复</a>和 <a href="https://github.com/mozilla/pdf.js/pull/21750">Liberation 修复</a>中的纠正原文；这不改变应用仍打包 PDF.js 5.6.205 的事实。所核对的四款 Liberation 字体版本均为 1.07.4，不能因旧文件写有 OFL 就将其描述为 OFL 字体。</p>
+<h3 id="2-threejsjszip-与界面字体">2. Three.js、JSZip 与界面字体</h3>
+<ul><li>Three.js 0.186.1：Copyright © 2010–2026 three.js authors，采用 <a href="../assets/licenses/three/LICENSE.txt">MIT 许可</a>。应用使用包含本地修改的版本。</li><li>JSZip 3.10.1：Copyright (c) 2009–2016 Stuart Knightley、David Duponchel、Franz Buchinger、António Afonso。项目选择 MIT；<a href="../assets/licenses/jszip/LICENSE.txt">上游完整许可原文</a>同时保留其任选 MIT 或 GPLv3 的授权说明。</li><li>Figtree：Copyright 2022 The Figtree Project Authors，采用 <a href="../assets/licenses/fonts/figtree-OFL.txt">SIL Open Font License 1.1</a>。</li><li>Inter：Copyright 2020 The Inter Project Authors，采用 <a href="../assets/licenses/fonts/inter-OFL.txt">SIL Open Font License 1.1</a>。</li></ul>
+<h3 id="3-声明范围与联系">3. 声明范围与联系</h3>
+<p>本节列出当前已核对的阅读器核心库、PDF.js 附属资源和本地字体。你导入的电子书、图片以及第三方提供的播客、转录和封面，仍分别受其权利人的授权约束，不因这些组件许可而获得再分发权。</p>
+<p>许可中的版权保留、分发、修改说明、源码或提供方式等要求，以相应原文为准。发布此网页本身不代表已经完成软件发行包的所有许可义务。许可问题请联系 yanhao wu：<a href="mailto:BloatMonster@163.com">BloatMonster@163.com</a>。</p><nav class="languages" aria-label="语言"><a href="../zh-Hans/#licenses" lang="zh-Hans" hreflang="zh-Hans" aria-current="true">简体中文</a><a href="../zh-Hant/#licenses" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a><a href="../en/#licenses" lang="en" hreflang="en">English</a></nav></section></main><footer><p>发布者：yanhao wu</p><p>联系邮箱：BloatMonster@163.com</p></footer></div></body>
+</html>

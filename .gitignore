@@ -1,0 +1,19 @@
+# 只跟踪可直接发布的静态页面、页面资源和 Pages 配置。
+*
+!/.gitignore
+!/.nojekyll
+!/.github/
+!/.github/workflows/
+!/.github/workflows/pages.yml
+!/index.html
+!/en/
+!/en/index.html
+!/zh-Hans/
+!/zh-Hans/index.html
+!/zh-Hant/
+!/zh-Hant/index.html
+!/assets/
+!/assets/style.css
+!/assets/licenses/
+!/assets/licenses/**/
+!/assets/licenses/**/*.txt
